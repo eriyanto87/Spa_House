@@ -7,7 +7,7 @@ export default function Nav() {
     <div className="nav">
       <Link to="/">Home </Link>
       {"  "}
-      <Link to="/treatments">Scheduling{"&"}Treatments </Link>
+      <Link to="/treatments">Treatments </Link>
       {"  "}
       <Link to="/contact">Contact Us </Link>
     </div>

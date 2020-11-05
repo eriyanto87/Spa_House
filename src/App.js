@@ -5,6 +5,7 @@ import Nav from "./Components/Nav/Nav";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home/Home";
 import Contact from "./Components/Contact/Contact";
+import Treatments from "./Components/Treatments/Treatments";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <main>
         <Route exact path="/" component={Home}></Route>
         <Route path="/contact" component={Contact}></Route>
+        <Route exact path="/treatments" component={Treatments}></Route>
       </main>
       <footer>
         <Footer />
