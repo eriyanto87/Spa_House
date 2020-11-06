@@ -12,7 +12,12 @@ export default function Massage(props) {
             Long, gliding, flowing strokes to calm the mind and body, increase
             circulation, and promote deep relaxation.
           </p>
-          <button>Pricing</button> <button>Book</button>
+          <Link to={{ pathname: `/pricing/massage` }}>
+            <button>Pricing</button>
+          </Link>{" "}
+          <Link to={{ pathname: "/schedule" }}>
+            <button>Add To Cart</button>
+          </Link>
         </div>
         <div className="services">
           <h4>Deep Tissue</h4>
@@ -20,7 +25,12 @@ export default function Massage(props) {
             Targeted, firm pressure to reach the deepest layers of muscle,
             fascia, and tendons.
           </p>
-          <button>Pricing</button> <button>Book</button>
+          <Link to={{ pathname: `/pricing/massage` }}>
+            <button>Pricing</button>
+          </Link>{" "}
+          <Link to={{ pathname: "/cart" }}>
+            <button>Add To Cart</button>
+          </Link>
         </div>
         <div className="services">
           <h4>Thai</h4>
@@ -32,7 +42,9 @@ export default function Massage(props) {
           <Link to={{ pathname: `/pricing/massage` }}>
             <button>Pricing</button>
           </Link>
-          <button>Book</button>
+          <Link to={{ pathname: "/cart" }}>
+            <button>Add To Cart</button>
+          </Link>
         </div>
       </section>
     </div>

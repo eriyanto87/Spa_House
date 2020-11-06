@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Lash() {
   return (
@@ -6,13 +7,16 @@ export default function Lash() {
       <h3>Lash</h3>
       <div className="services">
         <h4>Classic</h4>
-        <p></p>
-        <button>Pricing</button> <button>Book</button>
-      </div>
-      <div className="services">
-        <h4>Hybrid</h4>
-        <p></p>
-        <button>Pricing</button> <button>Book</button>
+        <p>
+          A technique in which a single extension is applied to one, isolated
+          natural lash.
+        </p>
+        <Link to={"/pricing/lash"}>
+          <button>Pricing</button>{" "}
+        </Link>
+        <Link to={{ pathname: "/cart" }}>
+          <button>Add To Cart</button>
+        </Link>
       </div>
     </div>
   );

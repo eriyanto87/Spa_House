@@ -8,6 +8,10 @@ import Contact from "./Components/Contact/Contact";
 import Treatments from "./Components/Treatments/Treatments";
 import Massage from "./Components/Treatments/Massage";
 import MassagePrices from "./Components/Pricing/MassagePrices";
+import LashPrices from "./Components/Pricing/LashPrices";
+import Schedule from "./Components/Schedule/Schedule";
+import Confirmation from "./Components/Confirmation/Confirmation";
+import Cart from "./Components/Cart/Cart";
 
 function App() {
   return (
@@ -22,6 +26,10 @@ function App() {
         <Route exact path="/treatments" component={Treatments} />
         <Route exact path="/treatments/massage" component={Massage} />
         <Route exact path="/pricing/massage" component={MassagePrices} />
+        <Route exact path="/pricing/lash" component={LashPrices} />
+        <Route path="/schedule" component={Schedule} />
+        <Route path="/confirmation" component={Confirmation} />
+        <Route path="/cart" component={Cart} />
       </main>
       <footer>
         <Footer />

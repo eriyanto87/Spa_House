@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Skin() {
   return (
@@ -7,12 +8,18 @@ export default function Skin() {
       <div className="services">
         <h4>Facials</h4>
         <p></p>
-        <button>Pricing</button> <button>Book</button>
+        <button>Pricing</button>{" "}
+        <Link to={{ pathname: "/schedule" }}>
+          <button>Book</button>
+        </Link>
       </div>
       <div className="services">
         <h4>Waxing</h4>
         <p></p>
-        <button>Pricing</button> <button>Book</button>
+        <button>Pricing</button>{" "}
+        <Link to={{ pathname: "/schedule" }}>
+          <button>Book</button>
+        </Link>
       </div>
     </div>
   );

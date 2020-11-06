@@ -15,7 +15,7 @@ export default function Treatments() {
     <div>
       <section>
         <h3>Treatments</h3>
-        {/* <select
+        <select
           onChange={(e) => {
             setState(e.target.value);
           }}
@@ -26,20 +26,20 @@ export default function Treatments() {
           <option value="skincare">Skin Care</option>
           <option value="nailcare">Nail Care</option>
           <option value="lash">Eyelash Extensions</option>
-        </select> */}
-        <Link to="/treatments/massage">
+        </select>
+        {/* <Link to="/treatments/massage">
           <button>Massage</button>{" "}
         </Link>
         <button>Skin Care</button> <button>Nail Care</button>{" "}
-        <button>Lash Extensions</button>{" "}
+        <button>Lash Extensions</button>{" "} */}
       </section>
-      {/* <hr />
+      <hr />
       <section>
         {state === "massage" && <Massage />}
         {state === "skincare" && <Skin />}
         {state === "nailcare" && <Nails />}
         {state === "lash" && <Lash />}
-      </section> */}
+      </section>
     </div>
   );
 }
