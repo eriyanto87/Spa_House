@@ -13,11 +13,8 @@ export default function Massage(props) {
             circulation, and promote deep relaxation.
           </p>
           <Link to={{ pathname: `/pricing/massage` }}>
-            <button>Pricing</button>
+            <button>Pricing/Book</button>
           </Link>{" "}
-          <Link to={{ pathname: "/schedule" }}>
-            <button>Add To Cart</button>
-          </Link>
         </div>
         <div className="services">
           <h4>Deep Tissue</h4>

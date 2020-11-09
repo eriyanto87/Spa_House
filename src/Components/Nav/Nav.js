@@ -17,7 +17,9 @@ export default function Nav() {
         </li>
         <li>
           {" "}
-          <Link to="/cart">Cart</Link>
+          <Link to="/cart">
+            <i className="fas fa-shopping-cart">Cart</i>
+          </Link>
         </li>
       </ul>
     </div>
