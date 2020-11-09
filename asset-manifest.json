@@ -1,20 +1,24 @@
 {
   "files": {
-    "main.css": "/spa_house/static/css/main.2faa6c84.chunk.css",
-    "main.js": "/spa_house/static/js/main.0c61cc58.chunk.js",
-    "main.js.map": "/spa_house/static/js/main.0c61cc58.chunk.js.map",
+    "main.css": "/spa_house/static/css/main.5a855943.chunk.css",
+    "main.js": "/spa_house/static/js/main.fab7979d.chunk.js",
+    "main.js.map": "/spa_house/static/js/main.fab7979d.chunk.js.map",
     "runtime-main.js": "/spa_house/static/js/runtime-main.85ab67ce.js",
     "runtime-main.js.map": "/spa_house/static/js/runtime-main.85ab67ce.js.map",
-    "static/js/2.67b533c9.chunk.js": "/spa_house/static/js/2.67b533c9.chunk.js",
-    "static/js/2.67b533c9.chunk.js.map": "/spa_house/static/js/2.67b533c9.chunk.js.map",
+    "static/css/2.6622e184.chunk.css": "/spa_house/static/css/2.6622e184.chunk.css",
+    "static/js/2.fa67cc04.chunk.js": "/spa_house/static/js/2.fa67cc04.chunk.js",
+    "static/js/2.fa67cc04.chunk.js.map": "/spa_house/static/js/2.fa67cc04.chunk.js.map",
     "index.html": "/spa_house/index.html",
-    "static/css/main.2faa6c84.chunk.css.map": "/spa_house/static/css/main.2faa6c84.chunk.css.map",
-    "static/js/2.67b533c9.chunk.js.LICENSE.txt": "/spa_house/static/js/2.67b533c9.chunk.js.LICENSE.txt"
+    "static/css/2.6622e184.chunk.css.map": "/spa_house/static/css/2.6622e184.chunk.css.map",
+    "static/css/main.5a855943.chunk.css.map": "/spa_house/static/css/main.5a855943.chunk.css.map",
+    "static/js/2.fa67cc04.chunk.js.LICENSE.txt": "/spa_house/static/js/2.fa67cc04.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.min.css": "/spa_house/static/media/fontawesome-webfont.f691f37e.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.85ab67ce.js",
-    "static/js/2.67b533c9.chunk.js",
-    "static/css/main.2faa6c84.chunk.css",
-    "static/js/main.0c61cc58.chunk.js"
+    "static/css/2.6622e184.chunk.css",
+    "static/js/2.fa67cc04.chunk.js",
+    "static/css/main.5a855943.chunk.css",
+    "static/js/main.fab7979d.chunk.js"
   ]
 }
