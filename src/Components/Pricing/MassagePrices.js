@@ -1,7 +1,9 @@
 import React from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 export default function MassagePrices() {
+  let history = useHistory();
+  const goBack = () => history.goBack();
   return (
     <div>
       <section>
@@ -11,7 +13,9 @@ export default function MassagePrices() {
         <input type="radio" id="90" value="139" />
         <label for="one-hour">90 minutes: $139</label>
         <br />
-        <button type="cancel">Back</button>
+        <button onClick={goBack} type="cancel">
+          Back
+        </button>
         <Link to="/schedule">
           <button>Schedule</button>
         </Link>

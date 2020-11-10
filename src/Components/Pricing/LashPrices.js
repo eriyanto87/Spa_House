@@ -1,7 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 export default function LashPrices() {
+  let history = useHistory();
+  const goBack = () => history.goBack();
   return (
     <div>
       <section>
@@ -14,7 +16,9 @@ export default function LashPrices() {
         <input type="radio" id="fill" value="59" />
         <label for="one-hour">Refill: $79</label>
         <br />
-        <button type="cancel">Cancel</button>
+        <button onClick={goBack} type="cancel">
+          Cancel
+        </button>
         <Link to="/schedule">
           <button type="submit">Schedule</button>
         </Link>

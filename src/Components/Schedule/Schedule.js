@@ -1,7 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import Context from "../Context/Context";
+import { API_ENDPOINT } from "../../config";
 
-export default function Schedule() {
+function Schedule() {
+  let history = useHistory();
+  const goBack = () => history.goBack();
   //create a bad route(conflicting times or time isn't available)
   const onSubmit = (evt) => {
     evt.preventDefault();
@@ -46,7 +50,9 @@ export default function Schedule() {
             <br />
             <input type="time" name="time" />
           </p>
-          <button type="cancel">Back</button>{" "}
+          <button onClick={goBack} type="cancel">
+            Back
+          </button>{" "}
           <Link to="/cart">
             <button type="submit">Cart</button>
           </Link>
@@ -55,3 +61,5 @@ export default function Schedule() {
     </div>
   );
 }
+
+export default Schedule;

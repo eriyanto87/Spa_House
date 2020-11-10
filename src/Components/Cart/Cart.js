@@ -1,7 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 export default function Cart() {
+  let history = useHistory();
+  const goBack = () => history.goBack();
   return (
     <div>
       <section>
@@ -15,7 +17,7 @@ export default function Cart() {
         </div>
         <button>delete</button>
         <hr />
-        <button>Back</button>
+        <button onClick={goBack}>Back</button>
         <Link to="/confirmation">
           {" "}
           <button type="submit">Confirmation</button>
