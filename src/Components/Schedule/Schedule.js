@@ -14,23 +14,36 @@ export default function Schedule() {
         <h3>Book Your Appointment!</h3>
         <form className="datetimecontainer" onSubmit={onSubmit}>
           <p>
-            <label>Name: </label>
-            <input required type="text" name="name" />
+            <input
+              required
+              placeholder="Name is required"
+              type="text"
+              name="name"
+            />
           </p>
           <p>
-            <label>Phone Number: </label>
-            <input required type="text" name="phone number" />
+            <input
+              required
+              placeholder="Phone number is required"
+              type="text"
+              name="phone number"
+            />
           </p>
           <p>
-            <label>Email: </label>
-            <input type="text" name="email" />
+            <input
+              placeholder="Enter your email address here"
+              type="text"
+              name="email"
+            />
           </p>
           <p>
-            <label>Pick Date: </label>
+            <label>Schedule a Date: </label>
+            <br />
             <input type="date" name="date" />
           </p>
           <p>
             <label>Pick a Time: </label>
+            <br />
             <input type="time" name="time" />
           </p>
           <button type="cancel">Back</button>{" "}

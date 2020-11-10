@@ -38,6 +38,11 @@ footer {
   background-color: #aaa;
 }
 
+.datetimecontainer input {
+  width: 20%;
+  padding: 0.5rem;
+}
+
 input,
 textarea {
   width: 70%;
