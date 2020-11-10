@@ -18,7 +18,7 @@ export default function Cart() {
         <button>Back</button>
         <Link to="/confirmation">
           {" "}
-          <button type="submit">Submit</button>
+          <button type="submit">Confirmation</button>
         </Link>
       </section>
     </div>

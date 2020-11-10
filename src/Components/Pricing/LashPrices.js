@@ -7,13 +7,16 @@ export default function LashPrices() {
       <section>
         <h3>Lash Prices</h3>
         <h3>Classic </h3>
-        <h4>Fullset: $99 (100 pcs and up)</h4>
-        <h4>Refill: $79 (80 pcs and under)</h4>
-        <p>*Has to be within 3 weeks of your fullset appointment</p>
-        <h4>Bottom Lashes: $15</h4>
-        <button type="cancel">Cancel</button>{" "}
-        <Link to="/cart">
-          <button type="submit">Add To Cart</button>
+        <p>
+          <input type="radio" id="fullset" value="79" />{" "}
+          <label for="one-hour">Full Set: $99</label>
+        </p>
+        <input type="radio" id="fill" value="59" />
+        <label for="one-hour">Refill: $79</label>
+        <br />
+        <button type="cancel">Cancel</button>
+        <Link to="/schedule">
+          <button type="submit">Schedule</button>
         </Link>
       </section>
     </div>

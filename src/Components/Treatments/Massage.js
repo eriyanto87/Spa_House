@@ -13,7 +13,7 @@ export default function Massage(props) {
             circulation, and promote deep relaxation.
           </p>
           <Link to={{ pathname: `/pricing/massage` }}>
-            <button>Pricing/Book</button>
+            <button>Next Step</button>
           </Link>{" "}
         </div>
         <div className="services">
@@ -23,11 +23,8 @@ export default function Massage(props) {
             fascia, and tendons.
           </p>
           <Link to={{ pathname: `/pricing/massage` }}>
-            <button>Pricing</button>
+            <button>Next Step</button>
           </Link>{" "}
-          <Link to={{ pathname: "/cart" }}>
-            <button>Add To Cart</button>
-          </Link>
         </div>
         <div className="services">
           <h4>Thai</h4>
@@ -37,11 +34,15 @@ export default function Massage(props) {
             service will be done on a firm mat.{" "}
           </p>
           <Link to={{ pathname: `/pricing/massage` }}>
-            <button>Pricing</button>
-          </Link>
-          <Link to={{ pathname: "/cart" }}>
-            <button>Add To Cart</button>
-          </Link>
+            <button>Next Step</button>
+          </Link>{" "}
+          <div className="services">
+            <h4>Pregnancy</h4>
+            <p>placeholder</p>
+            <Link to={{ pathname: `/pricing/massage` }}>
+              <button>Next Step</button>
+            </Link>{" "}
+          </div>
         </div>
       </section>
     </div>

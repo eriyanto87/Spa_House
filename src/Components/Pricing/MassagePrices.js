@@ -6,13 +6,14 @@ export default function MassagePrices() {
     <div>
       <section>
         <h3>Massage Pricing</h3>
-        <h4>1 hour - $99</h4>
-        <h4>1.5 hour - $139</h4>
-        <h4>$30+ every half hour</h4>
-        <h4>3 hours cap</h4>
+        <input type="radio" id="60" value="99" />
+        <label for="one-hour">60 minutes: $99</label>
+        <input type="radio" id="90" value="139" />
+        <label for="one-hour">90 minutes: $139</label>
+        <br />
         <button type="cancel">Back</button>
-        <Link to="/cart">
-          <button>Add To Cart</button>
+        <Link to="/schedule">
+          <button>Schedule</button>
         </Link>
       </section>
     </div>
