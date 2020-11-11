@@ -1,5 +1,4 @@
 import React from "react";
-import { Route, Link } from "react-router-dom";
 import Massage from "./Massage";
 import Skin from "./Skin";
 import Lash from "./Lash";

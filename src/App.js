@@ -19,8 +19,13 @@ class App extends Component {
   state = {
     users: [],
     carts: [],
-    addUser: (user) => this.setState({ users: [...this.state.users, user] }),
-    addCart: (cart) => this.setState({ carts: [...this.state.carts, cart] }),
+  };
+
+  addUser = (user) => {
+    this.setState({ users: [...this.state.users, user] });
+  };
+  addCart = (cart) => {
+    this.setState({ carts: [...this.state.carts, cart] });
   };
   getTreatment = () => {
     fetch(`${API_ENDPOINT}/treatments`)
@@ -54,7 +59,15 @@ class App extends Component {
   }
   render() {
     return (
-      <Context.Provider value={this.state}>
+      <Context.Provider
+        value={{
+          users: this.state.users,
+          carts: this.state.carts,
+          addCart: this.addCart,
+          addUser: this.addUser,
+          abc: "evisari",
+        }}
+      >
         <div className="App">
           <header>
             <Nav />
