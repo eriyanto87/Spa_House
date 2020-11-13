@@ -44,7 +44,17 @@ class App extends Component {
         });
     },
     addCart: (cart) => {
-      this.setState({ carts: [...this.state.carts, cart] });
+      fetch(`${API_ENDPOINT}/cart`, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(cart),
+      })
+        .then((res) => res.json())
+        .then((cartData) => {
+          this.setState({ carts: [...this.state.carts, cartData] });
+        });
     },
     addTreatments: (treatments) => {
       this.setState({ treatments: [...this.state.treatments, treatments] });

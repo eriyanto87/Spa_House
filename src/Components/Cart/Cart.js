@@ -6,8 +6,26 @@ export default function Cart(props) {
   const goBack = () => props.history.goBack();
 
   // const onSubmit (get comments)
+  //go to confirmation page
   // const comment
   //POST
+  const onSubmit = (e, context) => {
+    e.preventDefault();
+    console.log("cart button works");
+
+    const comments = e.target.comments.value;
+    console.log(comments);
+
+    const cartData = {
+      user_id: context.users[0].id,
+      treatment_id: context.treatment,
+      appointment_date: context.databaseDate,
+    };
+
+    console.log(cartData);
+    context.addCart(cartData);
+    props.history.push("/confirmation");
+  };
 
   return (
     <Context.Consumer>
@@ -25,20 +43,25 @@ export default function Cart(props) {
           <div>
             <section>
               <h3>Cart</h3>
-              <p>
-                {name[0].display_name} : ${name[0].price}
-              </p>
-              <p> Your appointment date and time:</p>
-              {context.displayDate} {context.displayTime}
-              <div>
+              <form onSubmit={(e) => onSubmit(e, context)}>
                 <p>
-                  <label>Comments:</label>
+                  {name[0].display_name} : ${name[0].price}
                 </p>
-                <textarea placeholder="Is there anything I need to know prior to the service? etc: any injuries? are you pregnant? any skin issues such as skin burn, etc" />
-              </div>
-              <hr />
-              <button onClick={goBack}>Back</button>{" "}
-              <button type="submit">Confirmation</button>
+                <p> Your appointment date and time:</p>
+                {context.displayDate} {context.displayTime}
+                <div>
+                  <p>
+                    <label>Comments:</label>
+                  </p>
+                  <textarea
+                    name="comments"
+                    placeholder="Is there anything I need to know prior to the service? etc: any injuries? are you pregnant? any skin issues such as skin burn, etc"
+                  />
+                </div>
+                <hr />
+                <button onClick={goBack}>Back</button>{" "}
+                <button type="submit">Confirmation</button>
+              </form>
             </section>
           </div>
         );

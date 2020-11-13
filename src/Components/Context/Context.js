@@ -1,11 +1,11 @@
 import React from "react";
 
 const Context = React.createContext({
-  users: [],
-  cart: [],
-  treatments: [],
-  addUser: () => {},
-  addCart: () => {},
+  // users: [],
+  // cart: [],
+  // treatments: [],
+  // addUser: () => {},
+  // addCart: () => {},
   //   getAllTreatments: () => {},
 });
 

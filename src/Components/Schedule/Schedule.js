@@ -4,41 +4,6 @@ import Context from "../Context/Context";
 function Schedule(props) {
   const goBack = () => props.history.goBack();
 
-  const milToStandard = (value) => {
-    if (value !== null && value !== undefined) {
-      //If value is passed in
-      if (value.indexOf("AM") > -1 || value.indexOf("PM") > -1) {
-        //If time is already in standard time then don't format.
-        return value;
-      } else {
-        if (value.length == 8) {
-          //If value is the expected length for military time then process to standard time.
-          var hour = value.substring(0, 2); //Extract hour
-          var minutes = value.substring(3, 5); //Extract minutes
-          var identifier = "AM"; //Initialize AM PM identifier
-
-          if (hour == 12) {
-            //If hour is 12 then should set AM PM identifier to PM
-            identifier = "PM";
-          }
-          if (hour == 0) {
-            //If hour is 0 then set to 12 for standard time 12 AM
-            hour = 12;
-          }
-          if (hour > 12) {
-            //If hour is greater than 12 then convert to standard 12 hour format and set the AM PM identifier to PM
-            hour = hour - 12;
-            identifier = "PM";
-          }
-          return hour + ":" + minutes + " " + identifier; //Return the constructed standard time
-        } else {
-          //If value is not the expected length than just return the value as is
-          return value;
-        }
-      }
-    }
-  };
-
   //create a bad route(conflicting times or time isn't available)
   const onSubmit = (evt, context) => {
     evt.preventDefault();
@@ -116,12 +81,12 @@ function Schedule(props) {
                 <p>
                   <label>Schedule a Date: </label>
                   <br />
-                  <input type="date" name="date" />
+                  <input required type="date" name="date" />
                 </p>
                 <p>
                   <label>Pick a Time: </label>
                   <br />
-                  <input type="time" name="time" />
+                  <input required type="time" name="time" />
                 </p>
                 <button onClick={goBack} type="cancel">
                   Back
