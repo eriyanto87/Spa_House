@@ -5,7 +5,7 @@ export default function Contact() {
     <div>
       <section>
         <h3>Contact Us</h3>
-        <form class="signup-form">
+        <form className="signup-form">
           <div>
             <input
               placeholder="First Name"

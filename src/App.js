@@ -7,8 +7,7 @@ import Home from "./Components/Home/Home";
 import Contact from "./Components/Contact/Contact";
 import Treatments from "./Components/Treatments/Treatments";
 import Massage from "./Components/Treatments/Massage";
-import MassagePrices from "./Components/Pricing/MassagePrices";
-import LashPrices from "./Components/Pricing/LashPrices";
+import Pricing from "./Components/Pricing/Pricing";
 import Schedule from "./Components/Schedule/Schedule";
 import Confirmation from "./Components/Confirmation/Confirmation";
 import Cart from "./Components/Cart/Cart";
@@ -19,25 +18,49 @@ class App extends Component {
   state = {
     users: [],
     carts: [],
-  };
-
-  addUser = (user) => {
-    this.setState({ users: [...this.state.users, user] });
-  };
-  addCart = (cart) => {
-    this.setState({ carts: [...this.state.carts, cart] });
-  };
-  getTreatment = () => {
-    fetch(`${API_ENDPOINT}/treatments`)
-      .then((res) => res.json())
-      .then((data) => {
-        this.setState({
-          carts: data,
-        });
+    treatments: [],
+    treatment: 0,
+    displayDate: "",
+    displayTime: "",
+    databaseDate: "",
+    setTreatment: (id) => this.setState({ treatment: id }),
+    setDatabaseDate: (dts) => this.setState({ databaseDate: dts }),
+    setDisplayDate: (date) => this.setState({ displayDate: date }),
+    setDisplayTime: (time) => this.setState({ displayTime: time }),
+    addUser: (user) => {
+      fetch(`${API_ENDPOINT}/users`, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(user),
       })
-      .catch((e) => {
-        console.log(e);
-      });
+        .then((res) => res.json())
+        .then((userData) => {
+          this.setState({ users: [...this.state.users, userData] });
+        })
+        .catch((e) => {
+          console.log(e.message);
+        });
+    },
+    addCart: (cart) => {
+      this.setState({ carts: [...this.state.carts, cart] });
+    },
+    addTreatments: (treatments) => {
+      this.setState({ treatments: [...this.state.treatments, treatments] });
+    },
+    getTreatment: () => {
+      fetch(`${API_ENDPOINT}/treatments`)
+        .then((res) => res.json())
+        .then((data) => {
+          this.setState({
+            treatments: data,
+          });
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    },
   };
 
   // getNotes = () => {
@@ -54,20 +77,12 @@ class App extends Component {
   // };
 
   componentDidMount() {
-    this.getTreatment();
+    this.state.getTreatment();
     //this.getFolders();
   }
   render() {
     return (
-      <Context.Provider
-        value={{
-          users: this.state.users,
-          carts: this.state.carts,
-          addCart: this.addCart,
-          addUser: this.addUser,
-          abc: "evisari",
-        }}
-      >
+      <Context.Provider value={this.state}>
         <div className="App">
           <header>
             <Nav />
@@ -78,8 +93,7 @@ class App extends Component {
             <Route path="/contact" component={Contact} />
             <Route exact path="/treatments" component={Treatments} />
             <Route exact path="/treatments/massage" component={Massage} />
-            <Route exact path="/pricing/massage" component={MassagePrices} />
-            <Route exact path="/pricing/lash" component={LashPrices} />
+            <Route exact path="/pricing" component={Pricing} />
             <Route path="/schedule" component={Schedule} />
             <Route path="/confirmation" component={Confirmation} />
             <Route path="/cart" component={Cart} />

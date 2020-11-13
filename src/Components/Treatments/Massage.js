@@ -12,7 +12,7 @@ export default function Massage(props) {
             Long, gliding, flowing strokes to calm the mind and body, increase
             circulation, and promote deep relaxation.
           </p>
-          <Link to={{ pathname: `/pricing/massage` }}>
+          <Link to={{ pathname: `/pricing` }}>
             <button>Next Step</button>
           </Link>{" "}
         </div>
@@ -22,7 +22,7 @@ export default function Massage(props) {
             Targeted, firm pressure to reach the deepest layers of muscle,
             fascia, and tendons.
           </p>
-          <Link to={{ pathname: `/pricing/massage` }}>
+          <Link to={{ pathname: `/pricing` }}>
             <button>Next Step</button>
           </Link>{" "}
         </div>
@@ -33,13 +33,13 @@ export default function Massage(props) {
             stretching. The recipient wears loose, comfortable clothing. The
             service will be done on a firm mat.{" "}
           </p>
-          <Link to={{ pathname: `/pricing/massage` }}>
+          <Link to={{ pathname: `/pricing` }}>
             <button>Next Step</button>
           </Link>{" "}
           <div className="services">
             <h4>Pregnancy</h4>
             <p>placeholder</p>
-            <Link to={{ pathname: `/pricing/massage` }}>
+            <Link to={{ pathname: `/pricing` }}>
               <button>Next Step</button>
             </Link>{" "}
           </div>

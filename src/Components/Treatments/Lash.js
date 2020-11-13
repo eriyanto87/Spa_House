@@ -11,7 +11,7 @@ export default function Lash() {
           A technique in which a single extension is applied to one, isolated
           natural lash.
         </p>
-        <Link to={{ pathname: `/pricing/lash` }}>
+        <Link to={{ pathname: `/pricing` }}>
           <button>Next Step</button>
         </Link>{" "}
       </div>
