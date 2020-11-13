@@ -1,5 +1,6 @@
 import React from "react";
 import Context from "../Context/Context";
+import moment from "moment";
 
 function Schedule(props) {
   const goBack = () => props.history.goBack();
@@ -7,12 +8,12 @@ function Schedule(props) {
   //create a bad route(conflicting times or time isn't available)
   const onSubmit = (evt, context) => {
     evt.preventDefault();
-    console.log("submit button works");
-    console.log("Date:", evt.target.date.value);
-    console.log("Time:", evt.target.time.value);
-    console.log("name", evt.target.name.value);
-    console.log("email", evt.target.email.value);
-    console.log("number", evt.target.number.value);
+    // console.log("submit button works");
+    // console.log("Date:", evt.target.date.value);
+    // console.log("Time:", evt.target.time.value);
+    // console.log("name", evt.target.name.value);
+    // console.log("email", evt.target.email.value);
+    // console.log("number", evt.target.number.value);
 
     const name = evt.target.name.value;
     const email = evt.target.email.value;
@@ -20,11 +21,12 @@ function Schedule(props) {
 
     const date = evt.target.date.value;
     const time = evt.target.time.value;
+    const dateTime = { date, time };
     // const myStandardTime = milToStandard(time);
 
-    console.log(date, time);
+    console.log(date, time, dateTime, "this is dateTime");
 
-    context.setDisplayDate(date);
+    context.setDisplayDate(moment(date).format("LL"));
     context.setDisplayTime(time);
 
     const dt = new Date(`${date}T${time}`);

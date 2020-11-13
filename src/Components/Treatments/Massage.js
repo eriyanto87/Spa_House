@@ -37,8 +37,14 @@ export default function Massage(props) {
             <button>Next Step</button>
           </Link>{" "}
           <div className="services">
-            <h4>Pregnancy</h4>
-            <p>placeholder</p>
+            <h4>Prenatal/Pregnancy</h4>
+            <p>
+              During a prenatal massage, you will usually positioned be lying on
+              your side rather than on your stomach or back. This is
+              particularly important during the later stages of pregnancy.
+              Pillows, bolsters, or padding may be used to support your back,
+              knees, and/or feet.{" "}
+            </p>
             <Link to={{ pathname: `/pricing` }}>
               <button>Next Step</button>
             </Link>{" "}
