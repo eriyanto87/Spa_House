@@ -7,10 +7,12 @@ export default function Confirmation() {
     <Context.Consumer>
       {(context) => {
         console.log(context);
+        const latestUserIndex = context.users.length - 1;
+        console.log(context.users[latestUserIndex].user_name, "name");
         return (
           <div>
             <section>
-              <h3>{context.users[0].user_name}, </h3>
+              <h3> {context.users[latestUserIndex].user_name}, </h3>
               <p>
                 Your appoinment is set at {context.displayTime} on{" "}
                 {context.displayDate}

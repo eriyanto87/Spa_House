@@ -19,6 +19,12 @@ function Schedule(props) {
     const email = evt.target.email.value;
     const number = evt.target.number.value;
 
+    const street = evt.target.street.value;
+    const city = evt.target.city.value;
+    const state = evt.target.state.value;
+    const zip = evt.target.zip.value;
+    console.log(street, city, state, zip, "test");
+
     const date = evt.target.date.value;
     const time = evt.target.time.value;
     const dateTime = { date, time };
@@ -38,6 +44,10 @@ function Schedule(props) {
       user_name: name,
       user_email: email,
       user_number: number,
+      user_street: street,
+      user_city: city,
+      user_state: state,
+      user_zip: zip,
     };
     context.addUser(userData);
     console.log(userData);
@@ -57,6 +67,7 @@ function Schedule(props) {
                 className="datetimecontainer"
                 onSubmit={(evt) => onSubmit(evt, context)}
               >
+                <label>Contact Info</label>
                 <p>
                   <input
                     required
@@ -80,13 +91,29 @@ function Schedule(props) {
                     name="email"
                   />
                 </p>
+                <label>Address: </label>
+                <p>
+                  Please fill this out if you want us to come to your location
+                </p>
+                <p>
+                  <input type="text" name="street" placeholder="Street" />
+                </p>
+                <p>
+                  <input type="text" name="city" placeholder="City" />
+                </p>
+                <p>
+                  <input type="text" name="state" placeholder="State" />
+                </p>
+                <p>
+                  <input type="number" name="zip" placeholder="Zip" />
+                </p>
                 <p>
                   <label>Schedule a Date: </label>
                   <br />
                   <input required type="date" name="date" />
                 </p>
                 <p>
-                  <label>Pick a Time: </label>
+                  <label>Schedule a Time: </label>
                   <br />
                   <input required type="time" name="time" />
                 </p>

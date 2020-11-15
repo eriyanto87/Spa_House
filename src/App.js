@@ -17,7 +17,7 @@ import { API_ENDPOINT } from "./config";
 class App extends Component {
   state = {
     users: [],
-    carts: [],
+    confirmations: [],
     treatments: [],
     treatment: 0,
     displayDate: "",
@@ -43,17 +43,19 @@ class App extends Component {
           console.log(e.message);
         });
     },
-    addCart: (cart) => {
-      fetch(`${API_ENDPOINT}/cart`, {
+    addConfirmation: (confirmation) => {
+      fetch(`${API_ENDPOINT}/confirmation`, {
         method: "POST",
         headers: {
           "content-type": "application/json",
         },
-        body: JSON.stringify(cart),
+        body: JSON.stringify(confirmation),
       })
         .then((res) => res.json())
-        .then((cartData) => {
-          this.setState({ carts: [...this.state.carts, cartData] });
+        .then((confirmationsData) => {
+          this.setState({
+            confirmations: [...this.state.confirmations, confirmationsData],
+          });
         });
     },
     addTreatments: (treatments) => {

@@ -15,15 +15,17 @@ export default function Cart(props) {
 
     const comments = e.target.comments.value;
     console.log(comments);
+    console.log(context.users.length - 1, "latest user");
+    const latestUserIndex = context.users.length - 1;
 
     const cartData = {
-      user_id: context.users[0].id,
+      user_id: context.users[latestUserIndex].id,
       treatment_id: context.treatment,
       appointment_date: context.databaseDate,
     };
 
     console.log(cartData);
-    context.addCart(cartData);
+    context.addConfirmation(cartData);
     props.history.push("/confirmation");
   };
 
@@ -38,7 +40,7 @@ export default function Cart(props) {
         console.log(context.treatments);
         console.log(context.treatment);
         console.log(name);
-
+        const latestUserIndex = context.users.length - 1;
         return (
           <div>
             <section>
