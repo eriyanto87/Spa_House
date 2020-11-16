@@ -26,14 +26,6 @@ export default function Treatments() {
           <option value="nailcare">Nail Care</option>
           <option value="lash">Eyelash Extensions</option>
         </select>
-        {/* <Link to="/treatments/massage">
-          <button>Massage</button>{" "}
-        </Link>
-        <button>Skin Care</button> <button>Nail Care</button>{" "}
-        <button>Lash Extensions</button>{" "} */}
-      </section>
-      <hr />
-      <section>
         {state === "massage" && <Massage />}
         {state === "skincare" && <Skin />}
         {state === "nailcare" && <Nails />}

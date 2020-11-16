@@ -15,7 +15,6 @@ export default function Home() {
           studio for a reduced price.
         </p>
       </section>
-      <hr />
       <section>
         <h3>Spa Services At The Comfort Of Your Own Home</h3>
         <p>

@@ -32,7 +32,7 @@ export default function Contact() {
       });
   };
   return (
-    <div>
+    <div className="contact">
       <section>
         <h3>Contact Us</h3>
         <form className="signup-form" onSubmit={handleOnSubmit}>

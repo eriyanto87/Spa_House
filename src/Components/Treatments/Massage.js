@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Massage(props) {
   return (
-    <div>
+    <div className="massage">
       <section>
         <h3>Massage</h3>
         <div className="services">
@@ -39,11 +39,9 @@ export default function Massage(props) {
           <div className="services">
             <h4>Prenatal/Pregnancy</h4>
             <p>
-              During a prenatal massage, you will usually positioned be lying on
-              your side rather than on your stomach or back. This is
-              particularly important during the later stages of pregnancy.
-              Pillows, bolsters, or padding may be used to support your back,
-              knees, and/or feet.{" "}
+              You will be positioned lying on your side rather than on your
+              stomach or back. Pillows, bolsters, or padding may be used to
+              support your back, knees, and/or feet.{" "}
             </p>
             <Link to={{ pathname: `/pricing` }}>
               <button>Next Step</button>

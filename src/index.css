@@ -1,23 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
-  color: #444;
+  background-color: black;
   text-align: center;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #444;
+  color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: #dbdff9;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
 
 .nav {
   padding: 1% 0;
-  background-color: #aaa;
 }
 
 .nav li {
@@ -29,13 +49,12 @@ code {
 section {
   min-height: 200px;
   padding: 3% 1.5%;
-  background-color: #ccc;
+  /* background-color: #ccc; */
 }
 
 footer {
   font-weight: 800;
   padding: 1% 0;
-  background-color: #aaa;
 }
 
 .datetimecontainer input {
@@ -45,7 +64,7 @@ footer {
 
 input,
 textarea {
-  width: 70%;
+  width: 30%;
   border-radius: 5px;
   padding: 0.25rem;
   margin-bottom: 0.25rem;
@@ -77,6 +96,20 @@ button {
   border-radius: 5px;
   margin: 1rem;
   padding: 0.5rem;
+}
+
+.contact {
+  background-image: url("./images/massage-sushi1.jpg");
+  background-size: 35%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home {
+  background-image: url("./images/home-massage-dtla.png");
+  background-size: 55%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @media all and (min-width: 800px) {
