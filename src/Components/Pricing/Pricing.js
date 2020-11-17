@@ -21,8 +21,6 @@ export default function MassagePrices(props) {
   return (
     <Context.Consumer>
       {(context) => {
-        console.log(context);
-        console.log(context.treatment);
         return (
           <div className="pricing">
             <Nav />
