@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
-import Header from "./Components/Header/Header";
-import Nav from "./Components/Nav/Nav";
 import About from "./Components/About/About";
-import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home/Home";
 import Contact from "./Components/Contact/Contact";
 import Treatments from "./Components/Treatments/Treatments";

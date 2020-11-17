@@ -24,9 +24,9 @@ export default function MassagePrices(props) {
         return (
           <div className="pricing">
             <Nav />
-            <section>
+            <section className="pricingSection">
               <h3>PRICING</h3>
-              <p>Please Choose A Service</p>
+              <p className="pricingHighlight">Please Choose A Service</p>
               <form
                 onSubmit={onSubmit}
                 onChange={(e) => getTreatmentId(e, context)}
@@ -40,14 +40,15 @@ export default function MassagePrices(props) {
                         id={t.id}
                         name="price"
                       />
-                      {t.display_name}: ${t.price}
+                      {t.display_name}-{" "}
+                      <span className="pricingHighlight">${t.price}</span>
                     </label>
                   </p>
                 ))}
                 <button onClick={goBack} type="cancel">
-                  Back
+                  BACK
                 </button>{" "}
-                <button type="submit">Schedule</button>
+                <button type="submit">SCHEDULE</button>
               </form>
             </section>
             <Footer />

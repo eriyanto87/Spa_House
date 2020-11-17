@@ -38,10 +38,6 @@ export default function Cart(props) {
         const name = context.treatments.filter(
           (t) => t.id == context.treatment
         );
-        console.log(context.treatments);
-        console.log(context.treatment);
-        console.log(name);
-        const latestUserIndex = context.users.length - 1;
         return (
           <div>
             <header>

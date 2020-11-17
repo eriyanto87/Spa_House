@@ -76,6 +76,10 @@ footer {
   padding: 0.5rem;
 }
 
+.pricingHighlight {
+  color: #fb9fa0;
+}
+
 input,
 textarea {
   width: 30%;
@@ -150,13 +154,15 @@ button {
   font-weight: 900;
 }
 
-.aboutSection {
+.aboutSection,
+.pricingSection {
   background-color: rgb(24, 23, 22, 0.5);
   margin: 0 35px;
   padding: 35px 35px;
 }
 
-.aboutSection h3 {
+.aboutSection,
+.pricingSection h3 {
   font-weight: 900;
   text-shadow: 1px solid black;
 }
@@ -211,9 +217,10 @@ img {
   margin: 0;
   box-sizing: border-box;
 }
-input[type="radio"]:checked + label {
+
+/* input[type="radio"]:checked {
   background-color: darkred;
-}
+} */
 
 .pricingContainer label {
   display: flex;
@@ -252,7 +259,7 @@ input[type="radio"]:checked + label {
   }
 
   .aboutSection h3 {
-    font-size: 5vh;
+    font-size: 3.8vh;
   }
 
   .sm-text {
