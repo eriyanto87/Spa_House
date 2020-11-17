@@ -7,7 +7,6 @@ import img5 from "../../images/massage-office.jpg";
 import img6 from "../../images/massage-sushi2.jpg";
 import img7 from "../../images/home-massage2.png";
 import img8 from "../../images/home-massageedit.png";
-import img9 from "../../images/nes-massage.jpg";
 import Nav from "../Nav/Nav";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
@@ -25,7 +24,6 @@ export default function Gallery() {
       <img src={img6} alt="chair massage at a dog birthday party" />
       <img src={img7} alt="massage at home" />
       <img src={img8} alt="massage at home" />
-      <img src={img9} alt="nes massage" />
       <Footer />
     </div>
   );
