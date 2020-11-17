@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Nav from "../Nav/Nav";
+import Footer from "../Footer/Footer";
 
 export default function Contact() {
   const [serverState, setServerState] = useState({
@@ -33,6 +35,7 @@ export default function Contact() {
   };
   return (
     <div className="contact">
+      <Nav />
       <section>
         <h3>Contact Us</h3>
         <form className="signup-form" onSubmit={handleOnSubmit}>
@@ -78,6 +81,7 @@ export default function Contact() {
           )}
         </form>
       </section>
+      <Footer />
     </div>
   );
 }

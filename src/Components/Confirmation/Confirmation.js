@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Context from "../Context/Context";
+import Nav from "../Nav/Nav";
+import Footer from "../Footer/Footer";
 
 export default function Confirmation() {
   return (
@@ -11,6 +13,7 @@ export default function Confirmation() {
         console.log(context.users[latestUserIndex].user_name, "name");
         return (
           <div>
+            <Nav />
             <section>
               <h3> {context.users[latestUserIndex].user_name}, </h3>
               <p>
@@ -26,6 +29,7 @@ export default function Confirmation() {
                 <h3>Home</h3>
               </Link>
             </section>
+            <Footer />
           </div>
         );
       }}

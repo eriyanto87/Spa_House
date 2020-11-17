@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Nav from "./Components/Nav/Nav";
+import About from "./Components/About/About";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home/Home";
 import Contact from "./Components/Contact/Contact";
@@ -11,6 +12,7 @@ import Pricing from "./Components/Pricing/Pricing";
 import Schedule from "./Components/Schedule/Schedule";
 import Confirmation from "./Components/Confirmation/Confirmation";
 import Cart from "./Components/Cart/Cart";
+import Gallery from "./Components/Gallery/Gallery";
 import Context from "./Components/Context/Context";
 import { API_ENDPOINT } from "./config";
 
@@ -95,13 +97,10 @@ class App extends Component {
   render() {
     return (
       <Context.Provider value={this.state}>
-        <div className="App">
-          <header>
-            <Nav />
-            <Header />
-          </header>
+        <div>
           <main>
             <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
             <Route exact path="/treatments" component={Treatments} />
             <Route exact path="/treatments/massage" component={Massage} />
@@ -109,10 +108,8 @@ class App extends Component {
             <Route path="/schedule" component={Schedule} />
             <Route path="/confirmation" component={Confirmation} />
             <Route path="/cart" component={Cart} />
+            <Route path="/gallery" component={Gallery} />
           </main>
-          <footer>
-            <Footer />
-          </footer>
         </div>
       </Context.Provider>
     );

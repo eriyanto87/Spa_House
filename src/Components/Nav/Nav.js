@@ -10,6 +10,9 @@ export default function Nav() {
           <Link to="/">Home </Link>
         </li>
         <li>
+          <Link to="/about">About </Link>
+        </li>
+        <li>
           <Link to="/treatments">Treatments </Link>
         </li>
         <li>
@@ -19,11 +22,14 @@ export default function Nav() {
           <Link to="/contact">Contact Us </Link>
         </li>
         <li>
+          <Link to="/gallery">Gallery</Link>
+        </li>
+        {/* <li>
           {" "}
           <Link to="/cart">
             <i className="fas fa-shopping-cart">Cart</i>
           </Link>
-        </li>
+        </li> */}
       </ul>
     </div>
   );

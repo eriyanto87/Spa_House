@@ -1,6 +1,8 @@
 import React from "react";
 import Context from "../Context/Context";
 import moment from "moment";
+import Nav from "../Nav/Nav";
+import Footer from "../Footer/Footer";
 
 function Schedule(props) {
   const goBack = () => props.history.goBack();
@@ -61,6 +63,7 @@ function Schedule(props) {
         console.log(context.date);
         return (
           <div>
+            <Nav />
             <section>
               <h3>{context.abc}Book Your Appointment!</h3>
               <form
@@ -125,6 +128,7 @@ function Schedule(props) {
                 </button>
               </form>
             </section>
+            <Footer />
           </div>
         );
       }}

@@ -3,6 +3,8 @@ import Massage from "./Massage";
 import Skin from "./Skin";
 import Lash from "./Lash";
 import Nails from "./Nails";
+import Nav from "../Nav/Nav";
+import Footer from "../Footer/Footer";
 
 export default function Treatments() {
   //onchange
@@ -12,6 +14,7 @@ export default function Treatments() {
 
   return (
     <div>
+      <Nav />
       <section>
         <h3>Treatments</h3>
         <select
@@ -31,6 +34,7 @@ export default function Treatments() {
         {state === "nailcare" && <Nails />}
         {state === "lash" && <Lash />}
       </section>
+      <Footer />
     </div>
   );
 }

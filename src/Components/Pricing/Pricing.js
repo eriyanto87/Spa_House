@@ -1,5 +1,7 @@
 import React from "react";
 import Context from "../Context/Context";
+import Nav from "../Nav/Nav";
+import Footer from "../Footer/Footer";
 
 export default function MassagePrices(props) {
   const goBack = () => props.history.goBack();
@@ -22,18 +24,23 @@ export default function MassagePrices(props) {
         console.log(context);
         console.log(context.treatment);
         return (
-          <div>
+          <div className="pricing">
+            <Nav />
             <section>
-              <h3>Massage Pricing</h3>
+              <h3>Pricing</h3>
               <form
-                className="pricing"
                 onSubmit={onSubmit}
                 onChange={(e) => getTreatmentId(e, context)}
               >
                 {context.treatments.map((t, i) => (
-                  <p key={i} className="price">
-                    <input type="radio" id={t.id} name="price" />
+                  <p className="pricingContainer" key={i}>
                     <label>
+                      <input
+                        className="price"
+                        type="radio"
+                        id={t.id}
+                        name="price"
+                      />
                       {t.display_name}: ${t.price}
                     </label>
                   </p>
@@ -44,6 +51,7 @@ export default function MassagePrices(props) {
                 <button type="submit">Schedule</button>
               </form>
             </section>
+            <Footer />
           </div>
         );
       }}

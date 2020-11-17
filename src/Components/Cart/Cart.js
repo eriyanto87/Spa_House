@@ -1,6 +1,7 @@
 import React from "react";
 import Context from "../Context/Context";
-import API_ENDPOINT from "../../config";
+import Nav from "../Nav/Nav";
+import Footer from "../Footer/Footer";
 
 export default function Cart(props) {
   const goBack = () => props.history.goBack();
@@ -43,11 +44,15 @@ export default function Cart(props) {
         const latestUserIndex = context.users.length - 1;
         return (
           <div>
+            <header>
+              <Nav />
+            </header>
+
             <section>
               <h3>Cart</h3>
               <form onSubmit={(e) => onSubmit(e, context)}>
                 <p>{name[0].display_name}</p>
-                <p> Your appointment date and time:</p>
+                <h4> Your appointment date and time:</h4>
                 {context.displayDate} {context.displayTime}
                 <div>
                   <p>
@@ -65,6 +70,9 @@ export default function Cart(props) {
                 <button type="submit">Confirmation</button>
               </form>
             </section>
+            <footer>
+              <Footer />
+            </footer>
           </div>
         );
       }}

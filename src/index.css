@@ -16,9 +16,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+a {
+  font-size: 25px;
+  font-weight: 800;
+  text-decoration: none;
+}
 /* unvisited link */
 a:link {
-  color: red;
+  color: #09f9e9;
 }
 
 /* visited link */
@@ -33,7 +38,7 @@ a:hover {
 
 /* selected link */
 a:active {
-  color: blue;
+  color: #aedfdb;
 }
 
 .nav {
@@ -43,7 +48,11 @@ a:active {
 .nav li {
   display: inline;
   list-style-type: none;
-  margin-left: 1.5rem;
+  margin-left: 24px;
+}
+
+.nav ul {
+  padding-left: 0;
 }
 
 section {
@@ -84,36 +93,178 @@ button {
 }
 
 .pricing {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.price {
-  display: flex;
-  flex-direction: column;
-  border: 0.25rem solid black;
-  border-radius: 5px;
-  margin: 1rem;
-  padding: 0.5rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/home-massage-modern.png");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-weight: 900;
 }
 
 .contact {
-  background-image: url("./images/massage-sushi1.jpg");
-  background-size: 35%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url("./images/massage-mother'sday.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .home {
-  background-image: url("./images/home-massage-dtla.png");
-  background-size: 55%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.35)),
+    url("./images/home-massage-dtla1.png");
+  background-size: cover;
+  width: 100%;
+  background-position: center center;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  /* text-shadow: 2px 2px white; */
+}
+
+.about {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/massage-sushi3.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  max-width: 100%;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-weight: 900;
+}
+
+.aboutSection {
+  background-color: rgb(24, 23, 22, 0.5);
+  margin: 0 35px;
+  padding: 35px 35px;
+}
+
+.aboutSection h3 {
+  font-weight: 900;
+  text-shadow: 1px solid black;
+}
+
+.bg-image {
+  /* Full height */
+  height: 50%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Images used */
+img {
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  font-weight: bold;
+  border: 10px solid #f1f1f1;
+  margin: 80px auto;
+  display: flex;
+  align-items: center;
+  max-width: 90%;
+  font-size: 18vw;
+  padding: 20px;
+  text-align: center;
+}
+
+.sm-text {
+  font-weight: bold;
+  border: 8px solid #f1f1f1;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80%;
+  font-size: 5vw;
+  padding: 10px;
+  text-align: center;
+}
+
+.gallery {
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+input[type="radio"]:checked + label {
+  background-color: darkred;
+}
+
+.pricingContainer label {
+  display: flex;
+  border-radius: 4px;
 }
 
 @media all and (min-width: 800px) {
+  .home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.35)),
+      url("./images/home-massage-modern.png");
+    background-size: cover;
+  }
+
+  .contact {
+    background-position: center top;
+  }
+
   .pricing {
-    flex-direction: row;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("./images/home-massage-dtla.png");
+    background-size: cover;
+    min-height: 100vh;
+    max-width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-weight: 900;
+  }
+
+  .aboutSection h3 {
+    font-size: 5vh;
+  }
+
+  .sm-text {
+    font-weight: bold;
+    border: 8px solid #f1f1f1;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 25%;
+    font-size: 1.5vw;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .bg-text {
+    font-weight: bold;
+    border: 10px solid #f1f1f1;
+    margin: 80px auto;
+    display: flex;
+    align-items: center;
+    max-width: 35%;
+    height: 35%;
+    font-size: 7vw;
+    padding: 20px;
+    text-align: center;
+  }
+  img {
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 70%;
+    height: 100%;
   }
 }
