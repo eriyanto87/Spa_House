@@ -25,9 +25,6 @@ export default function Confirmation() {
               <h4>Lash</h4>
               <h4>Nails</h4>
               <h4>Skin</h4> */}
-              <Link to="/">
-                <h3>Home</h3>
-              </Link>
             </section>
             <Footer />
           </div>

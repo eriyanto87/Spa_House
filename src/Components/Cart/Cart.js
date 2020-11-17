@@ -51,9 +51,11 @@ export default function Cart(props) {
             <section>
               <h3>Cart</h3>
               <form onSubmit={(e) => onSubmit(e, context)}>
-                <p>{name[0].display_name}</p>
+                <p className="clientInfo">{name[0].display_name}</p>
                 <h4> Your appointment date and time:</h4>
-                {context.displayDate} {context.displayTime}
+                <p className="clientInfo">
+                  {context.displayDate} {context.displayTime}
+                </p>
                 <div>
                   <p>
                     <label>Comments:</label>
@@ -63,7 +65,7 @@ export default function Cart(props) {
                     placeholder="Is there anything I need to know prior to the service? etc: any injuries? are you pregnant? any skin issues such as skin burn, etc"
                   />
                   <h4>Total:</h4>
-                  <h3>${name[0].price}</h3>
+                  <h3 className="clientInfo">${name[0].price}</h3>
                 </div>
                 <hr />
                 <button onClick={goBack}>Back</button>{" "}

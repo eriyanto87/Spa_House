@@ -96,11 +96,18 @@ button {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("./images/home-massage-modern.png");
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   font-weight: 900;
+  background-attachment: fixed;
+}
+
+.clientInfo {
+  color: #fb9fa0;
+  font-size: 23px;
+  font-weight: 700;
 }
 
 .contact {
