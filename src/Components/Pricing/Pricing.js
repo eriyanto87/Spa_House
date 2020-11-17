@@ -27,7 +27,8 @@ export default function MassagePrices(props) {
           <div className="pricing">
             <Nav />
             <section>
-              <h3>Pricing</h3>
+              <h3>PRICING</h3>
+              <p>Please Choose A Service</p>
               <form
                 onSubmit={onSubmit}
                 onChange={(e) => getTreatmentId(e, context)}
