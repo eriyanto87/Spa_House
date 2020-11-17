@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gallery component Gallery Snapshot 1`] = `
+<div
+  className="gallery"
+>
+  <div
+    className="nav"
+  >
+    <ul>
+      <li>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Home 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/about"
+          onClick={[Function]}
+        >
+          About 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/treatments"
+          onClick={[Function]}
+        >
+          Treatments 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/pricing"
+          onClick={[Function]}
+        >
+          Pricing 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/contact"
+          onClick={[Function]}
+        >
+          Contact Us 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/gallery"
+          onClick={[Function]}
+        >
+          Gallery
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="sm-text"
+  >
+    <h1>
+      SPA HOUSE
+    </h1>
+  </div>
+  <img
+    alt="chair massage at a dog birthday party"
+    src="massage-sushi3.jpg"
+  />
+  <img
+    alt="massage at home"
+    src="home-massage-3.png"
+  />
+  <img
+    alt="massage with dtla view"
+    src="home-massage-dtla.png"
+  />
+  <img
+    alt="chair massage for a mother's day gift"
+    src="massage-mothersday2.jpg"
+  />
+  <img
+    alt="chair massage at an office"
+    src="massage-office.jpg"
+  />
+  <img
+    alt="chair massage at a dog birthday party"
+    src="massage-sushi2.jpg"
+  />
+  <img
+    alt="massage at home"
+    src="home-massage2.png"
+  />
+  <img
+    alt="massage at home"
+    src="home-massageedit.png"
+  />
+  <img
+    alt="sushi birthday"
+    src="sushi-bday.png"
+  />
+  <img
+    alt="massage at sushi birthday"
+    src="massage-sushi1.jpg"
+  />
+  <div>
+    <p>
+      © 2020
+    </p>
+  </div>
+</div>
+`;

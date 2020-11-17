@@ -6,9 +6,14 @@ import Footer from "../Footer/Footer";
 export default function MassagePrices(props) {
   const goBack = () => props.history.goBack();
 
-  const onSubmit = (e) => {
+  const onSubmit = (e, context) => {
     e.preventDefault();
-    props.history.push("/schedule");
+    console.log(context.treatment);
+    if (context.treatment > 0) {
+      props.history.push("/schedule");
+    } else {
+      context.setError("Please choose a service");
+    }
   };
 
   const getTreatmentId = (e, context) => {
@@ -26,9 +31,9 @@ export default function MassagePrices(props) {
             <Nav />
             <section className="pricingSection">
               <h3>PRICING</h3>
-              <p className="pricingHighlight">Please Choose A Service</p>
+              <p className="pricingHighlight">{context.error}</p>
               <form
-                onSubmit={onSubmit}
+                onSubmit={(e) => onSubmit(e, context)}
                 onChange={(e) => getTreatmentId(e, context)}
               >
                 {context.treatments.map((t, i) => (
@@ -39,6 +44,8 @@ export default function MassagePrices(props) {
                         type="radio"
                         id={t.id}
                         name="price"
+                        value={context.name}
+                        checked={t.id == context.treatment}
                       />
                       {t.display_name}-{" "}
                       <span className="pricingHighlight">${t.price}</span>

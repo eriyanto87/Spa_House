@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Schedule component Schedule Snapshot 1`] = `
+<div>
+  <div
+    className="nav"
+  >
+    <ul>
+      <li>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Home 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/about"
+          onClick={[Function]}
+        >
+          About 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/treatments"
+          onClick={[Function]}
+        >
+          Treatments 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/pricing"
+          onClick={[Function]}
+        >
+          Pricing 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/contact"
+          onClick={[Function]}
+        >
+          Contact Us 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/gallery"
+          onClick={[Function]}
+        >
+          Gallery
+        </a>
+      </li>
+    </ul>
+  </div>
+  <section>
+    <h3>
+      Book Your Appointment!
+    </h3>
+    <form
+      className="datetimecontainer"
+      onSubmit={[Function]}
+    >
+      <label>
+        Contact Info
+      </label>
+      <p>
+        <input
+          name="name"
+          placeholder="Name is required"
+          required={true}
+          type="text"
+        />
+      </p>
+      <p>
+        <input
+          name="number"
+          placeholder="Phone number is required"
+          required={true}
+          type="text"
+        />
+      </p>
+      <p>
+        <input
+          name="email"
+          placeholder="Enter your email address here"
+          type="text"
+        />
+      </p>
+      <label>
+        Address: 
+      </label>
+      <p>
+        Please fill this out if you want us to come to your location
+      </p>
+      <p>
+        <input
+          name="street"
+          placeholder="Street"
+          type="text"
+        />
+      </p>
+      <p>
+        <input
+          name="city"
+          placeholder="City"
+          type="text"
+        />
+      </p>
+      <p>
+        <input
+          name="state"
+          placeholder="State"
+          type="text"
+        />
+      </p>
+      <p>
+        <input
+          name="zip"
+          placeholder="Zip"
+          type="number"
+        />
+      </p>
+      <p>
+        <label>
+          Schedule a Date: 
+        </label>
+        <br />
+        <input
+          name="date"
+          required={true}
+          type="date"
+        />
+      </p>
+      <p>
+        <label>
+          Schedule a Time: 
+        </label>
+        <br />
+        <input
+          name="time"
+          required={true}
+          type="time"
+        />
+      </p>
+      <button
+        onClick={[Function]}
+        type="cancel"
+      >
+        Back
+      </button>
+       
+      <button
+        id="cart"
+        type="submit"
+      >
+        Cart
+      </button>
+    </form>
+  </section>
+  <div>
+    <p>
+      © 2020
+    </p>
+  </div>
+</div>
+`;

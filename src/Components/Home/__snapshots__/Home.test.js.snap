@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component Home Snapshot 1`] = `
+<div
+  className="home"
+>
+  <header>
+    <div
+      className="nav"
+    >
+      <ul>
+        <li>
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Home 
+          </a>
+        </li>
+        <li>
+          <a
+            href="/about"
+            onClick={[Function]}
+          >
+            About 
+          </a>
+        </li>
+        <li>
+          <a
+            href="/treatments"
+            onClick={[Function]}
+          >
+            Treatments 
+          </a>
+        </li>
+        <li>
+          <a
+            href="/pricing"
+            onClick={[Function]}
+          >
+            Pricing 
+          </a>
+        </li>
+        <li>
+          <a
+            href="/contact"
+            onClick={[Function]}
+          >
+            Contact Us 
+          </a>
+        </li>
+        <li>
+          <a
+            href="/gallery"
+            onClick={[Function]}
+          >
+            Gallery
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div
+    className="bg-text"
+  >
+    SPA HOUSE
+  </div>
+  <footer>
+    <div>
+      <p>
+        © 2020
+      </p>
+    </div>
+  </footer>
+</div>
+`;

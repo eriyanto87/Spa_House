@@ -82,7 +82,7 @@ footer {
 
 input,
 textarea {
-  width: 30%;
+  /* width: 30%; */
   border-radius: 5px;
   padding: 0.25rem;
   margin-bottom: 0.25rem;
@@ -156,7 +156,7 @@ button {
 
 .aboutSection,
 .pricingSection {
-  background-color: rgb(24, 23, 22, 0.5);
+  background-color: rgb(24, 23, 22, 0.7);
   margin: 0 35px;
   padding: 35px 35px;
 }
@@ -218,9 +218,10 @@ img {
   box-sizing: border-box;
 }
 
-/* input[type="radio"]:checked {
-  background-color: darkred;
-} */
+.pricingContainer {
+  display: flex;
+  justify-content: center;
+}
 
 .pricingContainer label {
   display: flex;
@@ -241,9 +242,9 @@ img {
   }
 
   .about {
-    background-position: center;
+    background-position: center top;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
-      url("./images/massage-sushi3.jpg");
+      url("./images/sushi-bday.png");
   }
 
   .pricing {

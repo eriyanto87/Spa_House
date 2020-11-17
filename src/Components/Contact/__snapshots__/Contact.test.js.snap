@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact component Contact Snapshot 1`] = `
+<div
+  className="contact"
+>
+  <div
+    className="nav"
+  >
+    <ul>
+      <li>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Home 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/about"
+          onClick={[Function]}
+        >
+          About 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/treatments"
+          onClick={[Function]}
+        >
+          Treatments 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/pricing"
+          onClick={[Function]}
+        >
+          Pricing 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/contact"
+          onClick={[Function]}
+        >
+          Contact Us 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/gallery"
+          onClick={[Function]}
+        >
+          Gallery
+        </a>
+      </li>
+    </ul>
+  </div>
+  <section>
+    <h3>
+      Contact Us
+    </h3>
+    <form
+      className="signup-form"
+      onSubmit={[Function]}
+    >
+      <div>
+        <input
+          id="first-name"
+          name="first-name"
+          placeholder="First Name"
+          type="text"
+        />
+      </div>
+      <div>
+        <input
+          id="last-name"
+          name="last-name"
+          placeholder="Last Name"
+          type="text"
+        />
+      </div>
+      <div>
+        <input
+          id="username"
+          name="username"
+          placeholder="Email"
+          type="text"
+        />
+      </div>
+      <div>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Enter Your Message Here"
+          type="message"
+        />
+      </div>
+      <button
+        disabled={false}
+        type="submit"
+      >
+        SEND
+      </button>
+    </form>
+  </section>
+  <div>
+    <p>
+      © 2020
+    </p>
+  </div>
+</div>
+`;

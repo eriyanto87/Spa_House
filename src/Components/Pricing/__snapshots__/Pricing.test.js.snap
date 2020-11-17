@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pricing component Pricing Snapshot 1`] = `
+<div
+  className="pricing"
+>
+  <div
+    className="nav"
+  >
+    <ul>
+      <li>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Home 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/about"
+          onClick={[Function]}
+        >
+          About 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/treatments"
+          onClick={[Function]}
+        >
+          Treatments 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/pricing"
+          onClick={[Function]}
+        >
+          Pricing 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/contact"
+          onClick={[Function]}
+        >
+          Contact Us 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/gallery"
+          onClick={[Function]}
+        >
+          Gallery
+        </a>
+      </li>
+    </ul>
+  </div>
+  <section
+    className="pricingSection"
+  >
+    <h3>
+      PRICING
+    </h3>
+    <p
+      className="pricingHighlight"
+    />
+    <form
+      onChange={[Function]}
+      onSubmit={[Function]}
+    >
+      <button
+        onClick={[Function]}
+        type="cancel"
+      >
+        BACK
+      </button>
+       
+      <button
+        type="submit"
+      >
+        SCHEDULE
+      </button>
+    </form>
+  </section>
+  <div>
+    <p>
+      © 2020
+    </p>
+  </div>
+</div>
+`;
