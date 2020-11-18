@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Confirmation component Confirmation Snapshot 1`] = `
+<div>
+  <div
+    className="nav"
+  >
+    <ul>
+      <li>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Home 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/about"
+          onClick={[Function]}
+        >
+          About 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/treatments"
+          onClick={[Function]}
+        >
+          Treatments 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/pricing"
+          onClick={[Function]}
+        >
+          Pricing 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/contact"
+          onClick={[Function]}
+        >
+          Contact Us 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/gallery"
+          onClick={[Function]}
+        >
+          Gallery
+        </a>
+      </li>
+    </ul>
+  </div>
+  <section>
+    <h3>
+       
+      
+      , 
+    </h3>
+    <p>
+      Your appoinment is set at 
+      
+       on
+       
+      
+    </p>
+  </section>
+  <div>
+    <p>
+      © 2020
+    </p>
+  </div>
+</div>
+`;
