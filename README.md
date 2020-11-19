@@ -1,5 +1,3 @@
-# Capstone #1
+# Spa House
 
-## Spa House
-
-### Evi the Traveling Spa
+live link: https://spa-house.evi.vercel.app/
