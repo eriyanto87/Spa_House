@@ -8,21 +8,21 @@ export default function Nails() {
       <div className="services">
         <h4>Manicure</h4>
         <p></p>
-        <Link to={{ pathname: `/pricing/massage` }}>
+        <Link to={{ pathname: `/pricing` }}>
           <button>Next Step</button>
         </Link>{" "}
       </div>
       <div className="services">
         <h4>Pedicure</h4>
         <p></p>
-        <Link to={{ pathname: `/pricing/massage` }}>
+        <Link to={{ pathname: `/pricing` }}>
           <button>Next Step</button>
         </Link>{" "}
       </div>
       <div className="services">
         <h4>Gel Manicure</h4>
         <p></p>
-        <Link to={{ pathname: `/pricing/massage` }}>
+        <Link to={{ pathname: `/pricing` }}>
           <button>Next Step</button>
         </Link>{" "}
       </div>

@@ -154,8 +154,14 @@ button {
   font-weight: 900;
 }
 
+.services {
+  display: flex;
+  flex-direction: row;
+}
+
 .aboutSection,
-.pricingSection {
+.pricingSection,
+.contactSection {
   background-color: rgb(24, 23, 22, 0.7);
   margin: 0 35px;
   padding: 35px 35px;

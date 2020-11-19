@@ -58,7 +58,9 @@ exports[`Contact component Contact Snapshot 1`] = `
       </li>
     </ul>
   </div>
-  <section>
+  <section
+    className="contactSection"
+  >
     <h3>
       Contact Us
     </h3>

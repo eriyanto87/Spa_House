@@ -30,13 +30,13 @@ export default function Contact() {
         handleServerResponse(true, "Thanks!", form);
       })
       .catch((r) => {
-        handleServerResponse(false, r.response.data.error, form);
+        handleServerResponse(false, "Please fill out all fields", form);
       });
   };
   return (
     <div className="contact">
       <Nav />
-      <section>
+      <section className="contactSection">
         <h3>Contact Us</h3>
         <form className="signup-form" onSubmit={handleOnSubmit}>
           <div>

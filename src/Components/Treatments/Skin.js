@@ -8,14 +8,14 @@ export default function Skin() {
       <div className="services">
         <h4>Facials</h4>
         <p></p>
-        <Link to={{ pathname: `/pricing/massage` }}>
+        <Link to={{ pathname: `/pricing` }}>
           <button>Next Step</button>
         </Link>{" "}
       </div>
       <div className="services">
         <h4>Waxing</h4>
         <p></p>
-        <Link to={{ pathname: `/pricing/massage` }}>
+        <Link to={{ pathname: `/pricing` }}>
           <button>Next Step</button>
         </Link>{" "}
       </div>

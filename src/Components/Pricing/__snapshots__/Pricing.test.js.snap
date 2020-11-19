@@ -66,7 +66,9 @@ exports[`Pricing component Pricing Snapshot 1`] = `
     </h3>
     <p
       className="pricingHighlight"
-    />
+    >
+      Please Select Your Service
+    </p>
     <form
       onChange={[Function]}
       onSubmit={[Function]}

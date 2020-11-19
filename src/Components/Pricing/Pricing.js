@@ -31,7 +31,7 @@ export default function MassagePrices(props) {
             <Nav />
             <section className="pricingSection">
               <h3>PRICING</h3>
-              <p className="pricingHighlight">{context.error}</p>
+              <p className="pricingHighlight">Please Select Your Service</p>
               <form
                 onSubmit={(e) => onSubmit(e, context)}
                 onChange={(e) => getTreatmentId(e, context)}

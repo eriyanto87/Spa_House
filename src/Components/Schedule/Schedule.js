@@ -10,12 +10,6 @@ function Schedule(props) {
   //create a bad route(conflicting times or time isn't available)
   const onSubmit = (evt, context) => {
     evt.preventDefault();
-    // console.log("submit button works");
-    // console.log("Date:", evt.target.date.value);
-    // console.log("Time:", evt.target.time.value);
-    // console.log("name", evt.target.name.value);
-    // console.log("email", evt.target.email.value);
-    // console.log("number", evt.target.number.value);
 
     const name = evt.target.name.value;
     const email = evt.target.email.value;
@@ -25,12 +19,10 @@ function Schedule(props) {
     const city = evt.target.city.value;
     const state = evt.target.state.value;
     const zip = evt.target.zip.value;
-    console.log(street, city, state, zip, "test");
 
     const date = evt.target.date.value;
     const time = evt.target.time.value;
     const dateTime = { date, time };
-    // const myStandardTime = milToStandard(time);
 
     console.log(date, time, dateTime, "this is dateTime");
 
@@ -42,18 +34,23 @@ function Schedule(props) {
     console.log(dts);
     context.setDatabaseDate(dts);
 
-    const userData = {
-      user_name: name,
-      user_email: email,
-      user_number: number,
-      user_street: street,
-      user_city: city,
-      user_state: state,
-      user_zip: zip,
-    };
-    context.addUser(userData);
-    console.log(userData);
-    props.history.push("/cart");
+    if (dt<= new Date()) {
+      alert('please select a later time')
+    }
+    else {
+      const userData = {
+        user_name: name,
+        user_email: email,
+        user_number: number,
+        user_street: street,
+        user_city: city,
+        user_state: state,
+        user_zip: zip,
+      };
+      context.addUser(userData);
+      console.log(userData);
+      props.history.push("/cart");
+    }
   };
 
   return (
