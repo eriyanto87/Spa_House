@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 
 export default function Massage(props) {
   return (
-    <div className="massage">
-      <section>
-        <h3>Massage</h3>
+    <div>
+      <section className="service">
         <div className="services">
           <h4>Relaxation</h4>
           <p>
@@ -36,17 +35,17 @@ export default function Massage(props) {
           <Link to={{ pathname: `/pricing` }}>
             <button>Next Step</button>
           </Link>{" "}
-          <div className="services">
-            <h4>Prenatal/Pregnancy</h4>
-            <p>
-              You will be positioned lying on your side rather than on your
-              stomach or back. Pillows, bolsters, or padding may be used to
-              support your back, knees, and/or feet.{" "}
-            </p>
-            <Link to={{ pathname: `/pricing` }}>
-              <button>Next Step</button>
-            </Link>{" "}
-          </div>
+        </div>
+        <div className="services">
+          <h4>Prenatal/Pregnancy</h4>
+          <p>
+            You will be positioned lying on your side rather than on your
+            stomach or back. Pillows, bolsters, or padding may be used to
+            support your back, knees, and/or feet.{" "}
+          </p>
+          <Link to={{ pathname: `/pricing` }}>
+            <button>Next Step</button>
+          </Link>{" "}
         </div>
       </section>
     </div>

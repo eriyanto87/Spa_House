@@ -76,22 +76,8 @@ class App extends Component {
     },
   };
 
-  // getNotes = () => {
-  //   fetch(`${API_ENDPOINT}/notes`)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       this.setState({
-  //         notes: data,
-  //       });
-  //     })
-  //     .catch((e) => {
-  //       console.log(e);
-  //     });
-  // };
-
   componentDidMount() {
     this.state.getTreatment();
-    //this.getFolders();
   }
   render() {
     return (
