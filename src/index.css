@@ -105,7 +105,7 @@ footer {
   border-radius: 5px;
   padding: 5px 5px 50px 30px;
   margin-bottom: 15px;
-  width: 73%;
+  width: 70%;
 }
 
 .comments {
@@ -393,9 +393,11 @@ input[type="radio"] {
   .comments {
     width: 30%;
   }
+  .contactSection textarea {
+    width: 20%;
+  }
 
-  .contactSection input,
-  textarea {
+  .contactSection input {
     border-radius: 5px;
     padding: 12px;
     margin-bottom: 12px;
