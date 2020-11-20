@@ -99,16 +99,17 @@ footer {
   color: #fb9fa0;
 }
 
-input,
+.contactSection input,
 textarea {
   border-radius: 5px;
-  padding: 0.25rem;
-  margin-bottom: 0.25rem;
+  padding: 15px;
+  margin-bottom: 12px;
+  width: 73%;
 }
 
 button {
   border-radius: 5px;
-  padding: 0.5rem;
+  padding: 7px;
   background-color: #fb9fa0;
   font-size: 18px;
 }
@@ -173,24 +174,30 @@ button {
   font-weight: 900;
 }
 
-.services h4 {
+.services h4,
+.serviceslast h4 {
   color: #fb9fa0;
   text-transform: uppercase;
   font-weight: 900;
 }
 
-.services {
+.serviceslast {
   display: flex;
   flex-direction: column;
-  border: 1px solid white;
   flex: 1 1 0;
   justify-content: space-between;
   padding: 40px 20px;
   font-weight: 800;
 }
 
-.service {
-  gap: 3%;
+.services {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid lightgray;
+  flex: 1 1 0;
+  justify-content: space-between;
+  padding: 40px 20px;
+  font-weight: 800;
 }
 
 .landing {
@@ -286,6 +293,10 @@ input[type="radio"] {
   margin-right: 10px;
 }
 
+.pricingSection button {
+  margin: 0 7px;
+}
+
 @media all and (min-width: 800px) {
   .home {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.35)),
@@ -353,15 +364,36 @@ input[type="radio"] {
     width: 70%;
     height: 100%;
   }
+
+  .services,
+  .serviceslast {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    flex: 1 1 0;
+    justify-content: space-between;
+    padding: 40px 20px;
+    font-weight: 800;
+  }
+
   .service {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 3%;
   }
 
   .pricingContainer {
     margin-left: 38%;
-    width: 30%;
+    width: 27%;
     text-align: left;
+  }
+
+  .contactSection input,
+  textarea {
+    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 12px;
+    width: 20%;
   }
 }

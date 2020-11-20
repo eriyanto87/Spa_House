@@ -54,7 +54,7 @@ export default function MassagePrices(props) {
                 ))}
                 <button onClick={goBack} type="cancel">
                   BACK
-                </button>{" "}
+                </button>
                 <button type="submit">SCHEDULE</button>
               </form>
             </section>

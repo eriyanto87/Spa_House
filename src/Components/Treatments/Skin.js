@@ -18,7 +18,7 @@ export default function Skin() {
             <button>Next Step</button>
           </Link>{" "}
         </div>
-        <div className="services">
+        <div className="serviceslast">
           <h4>Waxing</h4>
           <p> Available Upon Request. Pricing in currently unavailable.</p>
           <Link to={{ pathname: `/pricing` }}>

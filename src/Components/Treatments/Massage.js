@@ -36,7 +36,7 @@ export default function Massage(props) {
             <button>Next Step</button>
           </Link>{" "}
         </div>
-        <div className="services">
+        <div className="serviceslast">
           <h4>Prenatal/Pregnancy</h4>
           <p>
             You will be positioned lying on your side rather than on your

@@ -27,7 +27,7 @@ export default function Nails() {
             <button>Next Step</button>
           </Link>{" "}
         </div>
-        <div className="services">
+        <div className="serviceslast">
           <h4>Gel Manicure</h4>
           <p>
             A service that uses a gel-based polish and requires a UV or LED
