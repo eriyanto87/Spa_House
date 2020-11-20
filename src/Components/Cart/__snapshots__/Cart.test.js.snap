@@ -87,6 +87,7 @@ exports[`Cart component Cart Snapshot 1`] = `
           </label>
         </p>
         <textarea
+          className="comments"
           name="comments"
           placeholder="Is there anything I need to know prior to the service? etc: any injuries? are you pregnant? any skin issues such as skin burn, etc"
         />

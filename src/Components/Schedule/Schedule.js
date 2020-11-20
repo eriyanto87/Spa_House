@@ -22,22 +22,18 @@ function Schedule(props) {
 
     const date = evt.target.date.value;
     const time = evt.target.time.value;
-    const dateTime = { date, time };
-
-    console.log(date, time, dateTime, "this is dateTime");
 
     context.setDisplayDate(moment(date).format("LL"));
     context.setDisplayTime(time);
 
     const dt = new Date(`${date}T${time}`);
-    const dts = dt.toISOString(); // <== this value is the required format for the SQL table
-    console.log(dts);
+    const dts = dt.toISOString();
+
     context.setDatabaseDate(dts);
 
-    if (dt<= new Date()) {
-      alert('please select a later time')
-    }
-    else {
+    if (dt <= new Date()) {
+      alert("please select a later time");
+    } else {
       const userData = {
         user_name: name,
         user_email: email,
@@ -48,7 +44,6 @@ function Schedule(props) {
         user_zip: zip,
       };
       context.addUser(userData);
-      console.log(userData);
       props.history.push("/cart");
     }
   };
@@ -56,8 +51,6 @@ function Schedule(props) {
   return (
     <Context.Consumer>
       {(context) => {
-        console.log(context);
-        console.log(context.date);
         return (
           <div>
             <Nav />

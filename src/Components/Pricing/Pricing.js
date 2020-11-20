@@ -8,19 +8,12 @@ export default function MassagePrices(props) {
 
   const onSubmit = (e, context) => {
     e.preventDefault();
-    console.log(context.treatment);
-    if (context.treatment > 0) {
-      props.history.push("/schedule");
-    } else {
-      context.setError("Please choose a service");
-    }
+    props.history.push("/schedule");
   };
 
   const getTreatmentId = (e, context) => {
     const treatmentId = e.target.id;
-    console.log(treatmentId);
     context.setTreatment(treatmentId);
-    console.log(context.treatment);
   };
 
   return (

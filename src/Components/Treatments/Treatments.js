@@ -7,9 +7,6 @@ import Nav from "../Nav/Nav";
 import Footer from "../Footer/Footer";
 
 export default function Treatments() {
-  //onchange
-  //default value
-  //context
   const [state, setState] = React.useState("massage");
 
   return (

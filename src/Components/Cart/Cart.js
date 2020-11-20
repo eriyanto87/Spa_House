@@ -6,26 +6,19 @@ import Footer from "../Footer/Footer";
 export default function Cart(props) {
   const goBack = () => props.history.goBack();
 
-  // const onSubmit (get comments)
-  //go to confirmation page
-  // const comment
-  //POST
   const onSubmit = (e, context) => {
     e.preventDefault();
-    console.log("cart button works");
 
     const comments = e.target.comments.value;
-    console.log(comments);
-    console.log(context.users.length - 1, "latest user");
     const latestUserIndex = context.users.length - 1;
 
     const cartData = {
       user_id: context.users[latestUserIndex].id,
       treatment_id: context.treatment,
+      comment: comments,
       appointment_date: context.databaseDate,
     };
 
-    console.log(cartData);
     context.addConfirmation(cartData);
     props.history.push("/confirmation");
   };
@@ -33,8 +26,6 @@ export default function Cart(props) {
   return (
     <Context.Consumer>
       {(context) => {
-        console.log(context);
-
         const name = context.treatments.filter(
           (t) => t.id == context.treatment
         );
@@ -57,6 +48,7 @@ export default function Cart(props) {
                     <label>Comments:</label>
                   </p>
                   <textarea
+                    className="comments"
                     name="comments"
                     placeholder="Is there anything I need to know prior to the service? etc: any injuries? are you pregnant? any skin issues such as skin burn, etc"
                   />

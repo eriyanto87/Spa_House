@@ -22,8 +22,6 @@ class App extends Component {
     displayDate: "",
     displayTime: "",
     databaseDate: "",
-    error: "",
-    setError: (e) => this.setState({ error: e }),
     setTreatment: (id) => this.setState({ treatment: id }),
     setDatabaseDate: (dts) => this.setState({ databaseDate: dts }),
     setDisplayDate: (date) => this.setState({ displayDate: date }),
