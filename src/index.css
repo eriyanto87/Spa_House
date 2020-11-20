@@ -101,7 +101,6 @@ footer {
 
 input,
 textarea {
-  /* width: 30%; */
   border-radius: 5px;
   padding: 0.25rem;
   margin-bottom: 0.25rem;
@@ -187,6 +186,7 @@ button {
   flex: 1 1 0;
   justify-content: space-between;
   padding: 40px 20px;
+  font-weight: 800;
 }
 
 .service {
@@ -274,12 +274,16 @@ img {
 
 .pricingContainer {
   display: flex;
-  justify-content: center;
+  text-align: left;
 }
 
 .pricingContainer label {
   display: flex;
   border-radius: 4px;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
 }
 
 @media all and (min-width: 800px) {
@@ -353,5 +357,11 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: center;
+  }
+
+  .pricingContainer {
+    margin-left: 38%;
+    width: 30%;
+    text-align: left;
   }
 }
