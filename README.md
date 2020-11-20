@@ -16,5 +16,8 @@ React, CSS, Node, Express, and PostgreSQL
 ![about me page](./src/images/Screenshot.aboutme.png)
 ![treatments page](./src/images/Screenshot.treatments.png)
 ![pricing page](./src/images/Screenshot.pricing.png)
+![scheduling page](./src/images/Screenshot.schedule.png)
+![cart page](./src/images/Screenshot.Cart.png)
+![confirmation page](./src/images/Screenshot.confirmation.png)
 ![contact page](./src/images/Screenshot.contact.png)
 ![gallery page](./src/images/Screenshot.gallery.png)
