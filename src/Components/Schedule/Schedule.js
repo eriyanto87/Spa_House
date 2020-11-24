@@ -7,7 +7,6 @@ import Footer from "../Footer/Footer";
 function Schedule(props) {
   const goBack = () => props.history.goBack();
 
-  //create a bad route(conflicting times or time isn't available)
   const onSubmit = (evt, context) => {
     evt.preventDefault();
 
@@ -29,8 +28,20 @@ function Schedule(props) {
     const dt = new Date(`${date}T${time}`);
     const dts = dt.toISOString();
 
-    context.setDatabaseDate(dts);
+    //create a bad route(conflicting times or time isn't available)
+    for (let i = 0; i < context.confirmations.length; i++) {
+      const dtds = dt.toLocaleDateString();
+      if (
+        new Date(
+          context.confirmations[i].appointment_date
+        ).toLocaleDateString() == dtds
+      ) {
+        alert("Date already booked - Please select a different date");
+        return;
+      }
+    }
 
+    //cannot book prior to today
     if (dt <= new Date()) {
       alert("please select a later time");
     } else {
@@ -43,6 +54,7 @@ function Schedule(props) {
         user_state: state,
         user_zip: zip,
       };
+      context.setDatabaseDate(dts);
       context.addUser(userData);
       props.history.push("/cart");
     }

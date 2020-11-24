@@ -30,7 +30,8 @@ class Landing extends React.Component {
             <p>
               I made Spa House app to not only showcase my work and tell my
               clients a little bit more about myself, but its main purpose is
-              for a scheduling tool.{" "}
+              for a scheduling tool. . This is a fullstack app where I keep the
+              date, time, treatment that was picked by the users in my database.
             </p>
             <p>
               <h2>To schedule:</h2>

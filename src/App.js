@@ -57,6 +57,18 @@ class App extends Component {
           });
         });
     },
+    getConfirmation: () => {
+      fetch(`${API_ENDPOINT}/confirmation`)
+        .then((res) => res.json())
+        .then((data) => {
+          this.setState({
+            confirmations: data,
+          });
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    },
     addTreatments: (treatments) => {
       this.setState({ treatments: [...this.state.treatments, treatments] });
     },
@@ -76,6 +88,7 @@ class App extends Component {
 
   componentDidMount() {
     this.state.getTreatment();
+    this.state.getConfirmation();
   }
   render() {
     return (
