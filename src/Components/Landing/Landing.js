@@ -24,7 +24,7 @@ class Landing extends React.Component {
     return (
       <div>
         <button onClick={this.handleOpenModal}>App Description</button>
-        <ReactModal isOpen={this.state.showModal}>
+        <ReactModal ariaHideApp={false} isOpen={this.state.showModal}>
           <div className="landing">
             <h1>Welcome To Spa House!</h1>
             <p>

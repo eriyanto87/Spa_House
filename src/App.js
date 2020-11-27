@@ -16,10 +16,11 @@ import { API_ENDPOINT } from "./config";
 class App extends Component {
   state = {
     showModal: false,
+    error: "",
     users: [],
     confirmations: [],
     treatments: [],
-    treatment: 1,
+    treatment: 0,
     displayDate: "",
     displayTime: "",
     databaseDate: "",
@@ -27,6 +28,7 @@ class App extends Component {
     setDatabaseDate: (dts) => this.setState({ databaseDate: dts }),
     setDisplayDate: (date) => this.setState({ displayDate: date }),
     setDisplayTime: (time) => this.setState({ displayTime: time }),
+    setError: (error) => this.setState({ error: error }),
     addUser: (user) => {
       fetch(`${API_ENDPOINT}/users`, {
         method: "POST",
@@ -63,7 +65,7 @@ class App extends Component {
         .then((res) => res.json())
         .then((data) => {
           this.setState({
-            confirmations: [this.state.confirmations, data],
+            confirmations: data,
           });
         })
         .catch((e) => {

@@ -5,7 +5,11 @@ import Nav from "../Nav/Nav";
 import Footer from "../Footer/Footer";
 
 function Schedule(props) {
-  const goBack = () => props.history.goBack();
+  const goBack = (e, context) => {
+    //set treatment back to 0 when the back button is pressed
+    context.setTreatment(0);
+    props.history.goBack();
+  };
 
   const onSubmit = (evt, context) => {
     evt.preventDefault();
@@ -17,6 +21,7 @@ function Schedule(props) {
     const street = evt.target.street.value;
     const city = evt.target.city.value;
     const state = evt.target.state.value;
+    //changed the zip code to integer
     const zip = Number(evt.target.zip.value);
 
     const date = evt.target.date.value;
@@ -122,7 +127,7 @@ function Schedule(props) {
                   <br />
                   <input required type="time" name="time" />
                 </p>
-                <button onClick={goBack} type="cancel">
+                <button onClick={(e) => goBack(e, context)} type="cancel">
                   Back
                 </button>{" "}
                 <button id="cart" type="submit">

@@ -8,7 +8,11 @@ export default function MassagePrices(props) {
 
   const onSubmit = (e, context) => {
     e.preventDefault();
-    props.history.push("/schedule");
+    if (context.treatment === 0) {
+      context.setError("Please select a treatment");
+    } else {
+      props.history.push("/schedule");
+    }
   };
 
   const getTreatmentId = (e, context) => {
@@ -24,7 +28,7 @@ export default function MassagePrices(props) {
             <Nav />
             <section className="pricingSection">
               <h3>PRICING</h3>
-              <p className="pricingHighlight">Please Select Your Service</p>
+              <p className="pricingHighlight">{context.error}</p>
               <form
                 onSubmit={(e) => onSubmit(e, context)}
                 onChange={(e) => getTreatmentId(e, context)}
@@ -38,7 +42,7 @@ export default function MassagePrices(props) {
                         id={t.id}
                         name="price"
                         value={context.name}
-                        checked={t.id == context.treatment}
+                        // checked={t.id == context.treatment}
                       />
                       {t.display_name}-{" "}
                       <span className="pricingHighlight">${t.price}</span>
