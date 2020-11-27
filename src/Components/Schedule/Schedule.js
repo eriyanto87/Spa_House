@@ -17,7 +17,7 @@ function Schedule(props) {
     const street = evt.target.street.value;
     const city = evt.target.city.value;
     const state = evt.target.state.value;
-    const zip = evt.target.zip.value;
+    const zip = Number(evt.target.zip.value);
 
     const date = evt.target.date.value;
     const time = evt.target.time.value;

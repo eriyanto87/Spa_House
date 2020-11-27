@@ -15,6 +15,7 @@ import { API_ENDPOINT } from "./config";
 
 class App extends Component {
   state = {
+    showModal: false,
     users: [],
     confirmations: [],
     treatments: [],
@@ -62,7 +63,7 @@ class App extends Component {
         .then((res) => res.json())
         .then((data) => {
           this.setState({
-            confirmations: data,
+            confirmations: [this.state.confirmations, data],
           });
         })
         .catch((e) => {
