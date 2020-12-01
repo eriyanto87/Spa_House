@@ -29,6 +29,17 @@ export default function Cart(props) {
         const name = context.treatments.filter(
           (t) => t.id == context.treatment
         );
+
+        if (name.length < 1) {
+          return (
+            <div>
+              <Nav />
+              <h3>Error has occured!</h3>
+              <Footer />
+            </div>
+          );
+        }
+
         return (
           <div>
             <header>
@@ -38,7 +49,7 @@ export default function Cart(props) {
             <section>
               <h3>Cart</h3>
               <form onSubmit={(e) => onSubmit(e, context)}>
-                <p className="clientInfo">{name[0].display_name}</p>
+                <p className="clientInfo">{name[0].display_name} </p>
                 <h4> Your appointment date and time:</h4>
                 <p className="clientInfo">
                   {context.displayDate} {context.displayTime}

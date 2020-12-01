@@ -11,6 +11,7 @@ import Confirmation from "./Components/Confirmation/Confirmation";
 import Cart from "./Components/Cart/Cart";
 import Gallery from "./Components/Gallery/Gallery";
 import Context from "./Components/Context/Context";
+import ErrorBoundary from "./Components/ErrorBoundary/ErrorBoundary";
 import { API_ENDPOINT } from "./config";
 
 class App extends Component {
@@ -96,20 +97,18 @@ class App extends Component {
   render() {
     return (
       <Context.Provider value={this.state}>
-        <div>
-          <main>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
-            <Route exact path="/treatments" component={Treatments} />
-            <Route exact path="/treatments/massage" component={Massage} />
-            <Route exact path="/pricing" component={Pricing} />
-            <Route path="/schedule" component={Schedule} />
-            <Route path="/confirmation" component={Confirmation} />
-            <Route path="/cart" component={Cart} />
-            <Route path="/gallery" component={Gallery} />
-          </main>
-        </div>
+        <ErrorBoundary>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route exact path="/treatments" component={Treatments} />
+          <Route exact path="/treatments/massage" component={Massage} />
+          <Route exact path="/pricing" component={Pricing} />
+          <Route path="/schedule" component={Schedule} />
+          <Route path="/confirmation" component={Confirmation} />
+          <Route path="/cart" component={Cart} />
+          <Route path="/gallery" component={Gallery} />
+        </ErrorBoundary>
       </Context.Provider>
     );
   }

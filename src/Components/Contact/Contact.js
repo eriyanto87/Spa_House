@@ -61,12 +61,12 @@ export default function Contact() {
               type="text"
               name="username"
               id="username"
+              required
             />
           </div>
           <div>
             <textarea
               placeholder="Enter Your Message Here"
-              type="message"
               name="message"
               id="message"
             ></textarea>
